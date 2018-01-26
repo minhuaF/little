@@ -1,0 +1,30 @@
+{
+  "name": "little-cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/minhuaF/little.git"
+  },
+  "keywords": [
+    "cli"
+  ],
+  "author": "Miwa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/minhuaF/little/issues"
+  },
+  "homepage": "https://github.com/minhuaF/little#readme",
+  "bin": {
+    "little": "./bin/little.js"
+  },
+  "dependencies": {
+    "commander": "^2.13.0",
+    "download-git-repo": "^1.0.2",
+    "ora": "^1.3.0"
+  }
+}
