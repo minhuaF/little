@@ -23,12 +23,12 @@ for (let i = 0; i < templateInfo.length; i++) {
   const url = PROJECT.template[tempName]
   if (process.argv.slice(2) && tempName == process.argv.slice(2)[0]) {
     program
-      .command(tempName)
-      .usage(`<template-name> [project-name]`)
-      .description(`generate a new project from the ${tempName} template (${url})`)
-      .action(function (projectName) { // 用于设置命令执行的相关回调，fn可以接收命令的参数为函数形参，顺序与command()中定义的顺序一致
-        // TODO 这里编码的方式只能通过回调？是否有更好的方法
-        checkVersion(function () {
+    .command(tempName)
+    .usage(`<template-name> [project-name]`)
+    .description(`generate a new project from the ${tempName} template (${url})`)
+    .action(function (projectName) { // 用于设置命令执行的相关回调，fn可以接收命令的参数为函数形参，顺序与command()中定义的顺序一致
+      // TODO 这里编码的方式只能通过回调？是否有更好的方法
+      checkVersion(function () {
           isRename(projectName, function () {
             downloadAndGenerate(url, projectName)
           })
